@@ -1,0 +1,54 @@
+<html>
+<head>
+<style>
+    body {
+        text-align: center;
+        margin-top: 50px;
+        font-size: 500;
+        background-color: ghostwhite;
+    }
+   
+    h1 {
+        color: black;
+    }
+
+    h5 {
+        color: black;
+        background-color: mistyrose;
+    }
+
+    input[type="submit"] {
+        background-color: black;
+        color: white;
+        margin: 4px;
+    }
+</style>
+</head>
+
+<!--##NO predefine-->
+<body>
+    <h1>Advance Calculator!</h1>  <br>
+    <img width="20%" height="20%" src="{{url_for('static', filename='img.png') }} " />
+    <br>
+    <br>
+    <form method="POST">
+        <label >Enter expression</label><br><br>
+        <select class="is-focused is-large" name="operation" aria-label="operationDropdown">
+            <option>Choose operation</option>
+            <option value="simplify">Simplify</option>
+            <option value="factor">Factor</option>
+        </select>
+    <input placeholder="Expression" name="text">
+    <input type="submit">
+</form>
+
+
+    <p>Your equation is {{equation}} = {{ result }}</p>
+    <br>
+    <br>
+    <br>
+    <footer>
+        <h5 id="copyright-footer">created by: zinq</h5>
+    </footer>
+</body>
+</html>
